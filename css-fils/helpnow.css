@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #003366; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #007F7F;
+    color: white;
+    position: fixed;
+    padding: 10px 20px;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f4a261;
+}
+
+.logo img {
+    max-height: 100px;
+    border-radius: 10px;
+}
+
+.header-title {
+    margin: 0 20px;
+    color: #e0f7fa;
+}
+
+.container {
+    background-color: #ffffff; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #007bb8; 
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #007bb8;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #005f7f; 
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bb8; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005f7f; 
+}
+main{
+    width: 100vh;
+    padding-top: 200px;
+}
+.message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #007bb8;
+    display: none;
+}
+
+.donation-form:valid ~ .message {
+    display: block;
+}
+
+footer {
+    width: 100%;
+    background-color: #264653;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
